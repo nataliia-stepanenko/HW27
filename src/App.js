@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+
+import Form from "./components/Form";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container >
+      <Typography variant="h3" color="primary" mb={2}>Passenger information</Typography>
+      <Typography variant="subtitle1">Enter the required information for each traveler and be sure that it exactly matches the government-issued ID presented at the airport.</Typography>
+      <Form />
+    </Container>
   );
 }
 
