@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 
 const Form = () => {
     const { handleSubmit, control } = useForm();
+    
     const onSubmit = (data) => {
         console.log(data);
       };
@@ -22,12 +23,10 @@ const Form = () => {
                 render={({ field, fieldState: { error } }) => (
                     <TextField  
                         {...field} 
-                        id="outlined-basic"
-                        label="First name" 
+                        label="First name*" 
                         variant="outlined" 
                         error={!!error}
                         helperText={error?.message}
-                        required
                     />
                   )} 
                 />
@@ -37,7 +36,6 @@ const Form = () => {
                 render={({field, fieldState: {error}}) => (
                     <TextField  
                     {...field} 
-                    id="outlined-basic" 
                     label="Middle" 
                     variant="outlined" 
                     error={!!error}
@@ -52,12 +50,10 @@ const Form = () => {
                 render={({field, fieldState: {error}}) => (
                     <TextField  
                     {...field} 
-                    id="outlined-basic" 
-                    label="Last name" 
+                    label="Last name*" 
                     variant="outlined" 
                     error={!!error}
                     helperText={error?.message}
-                    required
                     sx={{
                         mr: 0,
                       }}
@@ -72,7 +68,6 @@ const Form = () => {
                 render={({field, fieldState: {error}}) => (
                     <TextField  
                     {...field} 
-                    id="outlined-basic" 
                     label="Suffix" 
                     variant="outlined" 
                     error={!!error}
@@ -87,12 +82,10 @@ const Form = () => {
                 render={({field, fieldState: {error}}) => (
                     <TextField  
                     {...field} 
-                    id="outlined-basic" 
-                    label="Date of birth" 
+                    label="Date of birth*" 
                     variant="outlined" 
                     error={!!error}
-                    helperText={error?error.message:"MM/DD/YY"}
-                    required
+                    helperText={error?.message}
                     type="date" 
                     InputLabelProps={{shrink: true,}}
                     sx={{
@@ -110,12 +103,10 @@ const Form = () => {
                 render={({field, fieldState: {error}}) => (
                     <TextField  
                     {...field} 
-                    id="outlined-basic" 
-                    label="Email address" 
+                    label="Email address*" 
                     variant="outlined" 
                     error={!!error}
                     helperText={error?.message}
-                    required
                     sx={{
                         width: 300,
                       }}
@@ -129,12 +120,10 @@ const Form = () => {
                 render={({field, fieldState: {error}}) => (
                     <TextField  
                     {...field} 
-                    id="outlined-basic" 
-                    label="Phone number" 
+                    label="Phone number*" 
                     variant="outlined" 
                     error={!!error}
                     helperText={error?.message}
-                    required
                     type="tel" 
                     InputLabelProps={{shrink: true,}}
                     sx={{
@@ -152,7 +141,6 @@ const Form = () => {
                 render={({field, fieldState: {error}}) => (
                     <TextField  
                     {...field} 
-                    id="outlined-basic" 
                     label="Redress number" 
                     variant="outlined" 
                     error={!!error}
@@ -170,12 +158,10 @@ const Form = () => {
                 render={({field, fieldState: {error}}) => (
                     <TextField  
                     {...field} 
-                    id="outlined-basic" 
-                    label="Known traveller number" 
+                    label="Known traveller number*" 
                     variant="outlined" 
                     error={!!error}
                     helperText={error?.message}
-                    required
                     sx={{
                         width: 300,
                         mr: 0,
