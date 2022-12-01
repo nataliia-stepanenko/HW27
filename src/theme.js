@@ -1,8 +1,12 @@
+import "@fontsource/nunito-sans/400.css";
+import "@fontsource/nunito-sans/600.css";
+import "@fontsource/nunito-sans/700.css";
+
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
     typography: {
-        // fontFamily: `"Nunito Sans"`,
+        fontFamily: ["Nunito Sans", "Arial", "sans-serif"].join(','),
         h3: {
             fontWeight: '700',
         },
